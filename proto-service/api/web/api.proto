@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoservice.web.proto";
+
+package web;
+
+import "account/account_api.proto";
+import "image/image_api.proto";
+
+message Api {
+    account.AccountApi account_api = 1;
+    image.ImageApi image_api = 2;
+}

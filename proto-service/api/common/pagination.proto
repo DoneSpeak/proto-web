@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoservice.common.proto";
+
+package common;
+
+import "common/valid.proto";
+
+message Pagination {
+    int32 page = 1 [(valid.min) = 1];
+    int32 size = 2 [(valid.min) = 1, (valid.max) = 100];
+    string sort = 3;
+}

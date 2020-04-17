@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoservice.account.proto.api";
+
+package account.api;
+
+import "common/pagination.proto";
+import "common/valid.proto";
+import "account/data/account.proto";
+
+message ListAccountRequest {
+    common.Pagination page = 1 [(valid.validate) = true];
+}
+
+message ListAccountResponse {
+    repeated account.data.Account accounts = 1;
+    common.Pagination page = 2;
+}
+
+/**
+ * 获取账号列表
+ */
+message ListAccount {
+    ListAccountRequest request = 1;
+    ListAccountResponse response = 2;
+}

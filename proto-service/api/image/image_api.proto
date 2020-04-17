@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoservice.image.proto";
+
+package image;
+
+message ImageApi {
+
+}
