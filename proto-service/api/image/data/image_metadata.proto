@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+message ImageMetadata {
+    int32 general_depth = 1;
+    // 纬度
+    double gps_lat = 10;
+    // 经度
+    double gps_lng = 11;
+    // 相对高度
+    double gps_alt = 12;
+    // 相对高度类型
+    string gps_alt_ref = 13;
+    // 朝向类型
+    OrientationTypeEnum tiff_orientation = 25;
+
+    string exif_contrast = 46;
+    // 色域，如sRGB
+    string exif_color_space = 47;
+}
+
+enum OrientationTypeEnum {
+    UN_KNOWN = 0;
+    NORMAL = 1;
+}

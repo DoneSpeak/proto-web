@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "setting/rest.proto";
+
+option (rest.global).headers = "content-type:application/x-protobuf";
+
+package image.rest;
+
+message ImageApi {
+
+}

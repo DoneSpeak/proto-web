@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoweb.account.proto.rest.api";
+
+import "setting/rest.proto";
+import "account/rest/data/account.proto";
+
+message ListAccountRequest {
+    string email = 1;
+    // 按照创建时间查询 (created_at_from, created_at_end]
+    int64 created_at_from = 2;
+    int64 created_at_end = 3;
+}
+
+message ListAccountResponse {
+    repeated account.rest.data.Account accounts = 1;
+}
+
+message ListAccount {
+    option (rest.api) = {method: "GET" path:"/account"};
+
+    ListAccountRequest request = 1;
+    ListAccountResponse response = 2;
+}

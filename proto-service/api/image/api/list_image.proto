@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "image/data/image.proto";
+
+message ListImageRequest {
+    bool with_metadata = 1;
+}
+
+message ListImageResponse {
+    repeated Image images = 1;
+}
+
+message ListImage {
+    ListImageRequest request = 1;
+    ListImageResponse response = 2;
+}

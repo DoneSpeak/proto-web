@@ -9,8 +9,8 @@ import "account/api/list_account.proto";
 import "account/api/get_account.proto";
 
 message AccountApi {
-    // POST /AccountApi/ListAccount
+    // POST /account-api/list-account
     account.api.ListAccount listAccount = 1;
-    // POST /AccountApi/ListAccount
+    // POST /account-api/get-account
     account.api.GetAccount getAccount = 2;
 }

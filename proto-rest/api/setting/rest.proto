@@ -1,0 +1,38 @@
+syntax = "proto2";
+
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoservice.common.proto";
+
+package rest;
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.FileOptions {
+    optional ApiGlobal global = 51001;
+}
+
+extend google.protobuf.MessageOptions {
+    optional Api api = 51001;
+}
+
+extend google.protobuf.FieldOptions {
+    // 为true时，不能为null，false 时必须为null
+    optional string path = 51001;
+    optional string headers = 51002;
+}
+
+message ApiGlobal {
+    // 请求头
+    map<string, string> headers = 1;
+}
+
+message Api {
+    // 请求方法
+    required string method = 1;
+    // 路径
+    required string path = 2;
+    // 路径参数
+    map<string, string> path_variable = 3;
+    // 请求头
+    map<string, string> headers = 4;
+}

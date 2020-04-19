@@ -57,21 +57,12 @@
     </dependencies>
 
     <build>
-        <extensions>
-            <extension>
-                <!-- 引入系统变量 -->
-                <!-- https://mvnrepository.com/artifact/kr.motd.maven/os-maven-plugin -->
-                <groupId>kr.motd.maven</groupId>
-                <artifactId>os-maven-plugin</artifactId>
-            </extension>
-        </extensions>
         <plugins>
             <plugin>
                 <!-- https://www.xolstice.org/protobuf-maven-plugin/index.html -->
                 <!-- https://mvnrepository.com/artifact/org.xolstice.maven.plugins/protobuf-maven-plugin -->
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
-                <version>0.6.1</version>
                 <extensions>true</extensions>
                 <configuration>
                     <!-- 参考: https://www.xolstice.org/protobuf-maven-plugin/usage.html -->

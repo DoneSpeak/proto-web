@@ -6,10 +6,17 @@
 
     <groupId>io.github.donespeak.protoweb</groupId>
     <artifactId>proto-web</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
         <module>proto-service</module>
+        <module>proto-rest</module>
+        <module>proto-validation</module>
+        <module>proto-grpc-envoy</module>
+        <module>proto-rpc</module>
+        <module>proto-grpc-gateway</module>
+        <module>parent</module>
     </modules>
 
 </project>

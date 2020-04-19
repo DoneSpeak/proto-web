@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Image {
+    string file_name = 1;
+    int32 file_size = 2;
+    int32 width = 3;
+    int32 height = 4;
+    string url_big = 5;
+    string url_mid = 6;
+    string url_small = 7;
+    int64 created_at = 8;
+}
