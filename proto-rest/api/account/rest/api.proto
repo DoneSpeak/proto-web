@@ -9,6 +9,7 @@ package account.rest;
 
 message AccountApi {
 
+    // 所有api路径前缀
     option (api.global).path = "/account";
     option (api.global).headers = "content-type:application/x-protobuf";
 

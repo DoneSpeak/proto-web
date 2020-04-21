@@ -3,6 +3,8 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "io.github.donespeak.protoweb.protorest.account.proto.rest.api";
 
+package account.rest.api;
+
 import "core/rest.proto";
 import "account/rest/data/account.proto";
 
@@ -20,6 +22,6 @@ message GetAccount {
     GetAccountRequest request = 1;
     GetAccountResponse response = 2;
 
-    // 约定：path_variable 开头的命名均为路劲参数
+    // 约定：path_variable 开头的命名均为路径参数
     int64 path_variable_account_id = 3;
 }
