@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "io.github.donespeak.protoweb.account.proto.rest.data";
+option java_package = "io.github.donespeak.protoweb.protorest.account.proto.rest.data";
 
 package account.rest.data;
 

@@ -7,8 +7,10 @@
 		<groupId>io.github.donespeak.protoweb</groupId>
 		<artifactId>parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
+		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
 
+	<groupId>io.github.donespeak.protoweb.protoservice</groupId>
 	<artifactId>proto-service</artifactId>
 	<packaging>pom</packaging>
 	<name>proto-service</name>
@@ -18,6 +20,27 @@
 		<module>core</module>
 		<module>account</module>
         <module>client</module>
-    </modules>
+		<module>web</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.github.donespeak.protoweb.protoservice</groupId>
+				<artifactId>proto-service-core</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.donespeak.protoweb.protoservice</groupId>
+				<artifactId>proto-service-account</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.donespeak.protoweb.protoservice</groupId>
+				<artifactId>proto-service-web</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 </project>

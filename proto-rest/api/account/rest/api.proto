@@ -1,9 +1,15 @@
 syntax = "proto3";
 
-import "setting/rest.proto";
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoweb.protorest.account.proto.rest";
 
-option (rest.global).headers = "content-type:application/x-protobuf";
+import "core/rest.proto";
+
+package account.rest;
 
 message AccountApi {
+
+    option (api.global).path = "/account";
+    option (api.global).headers = "content-type:application/x-protobuf";
 
 }

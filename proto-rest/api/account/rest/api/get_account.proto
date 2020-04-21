@@ -1,9 +1,9 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "io.github.donespeak.protoweb.account.proto.rest.api";
+option java_package = "io.github.donespeak.protoweb.protorest.account.proto.rest.api";
 
-import "setting/rest.proto";
+import "core/rest.proto";
 import "account/rest/data/account.proto";
 
 message GetAccountRequest {
@@ -15,7 +15,7 @@ message GetAccountResponse {
 
 message GetAccount {
 
-    option (rest.api) = {method: "GET" path:"/account/{accountId}"};
+    option (api.endpoint) = {method: "GET" path:"/account/{accountId}"};
 
     GetAccountRequest request = 1;
     GetAccountResponse response = 2;

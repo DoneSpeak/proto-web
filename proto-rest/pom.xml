@@ -8,9 +8,27 @@
     <groupId>io.github.donespeak.protoweb</groupId>
     <artifactId>parent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
+  <groupId>io.github.donespeak.protoweb.protorest</groupId>
   <artifactId>proto-rest</artifactId>
+  <packaging>pom</packaging>
   <name>proto-rest</name>
+
+  <modules>
+    <module>account</module>
+    <module>core</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.github.donespeak.protoweb.protorest</groupId>
+        <artifactId>proto-rest-core</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 </project>
