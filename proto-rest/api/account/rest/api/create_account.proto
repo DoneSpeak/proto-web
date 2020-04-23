@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoweb.protorest.account.proto.rest.api";
+
+package account.rest.api;
+
+import "core/rest.proto";
+import "account/rest/data/account.proto";
+
+message CreateAccountRequest {
+    account.rest.data.Account account = 1;
+}
+
+message CreateAccountResponse {
+    account.rest.data.Account account = 1;
+}
+
+message CreateAccount {
+
+    option (.rest.endpoint) = {method: "POST" path:"/account"};
+
+    CreateAccountRequest request = 1;
+    CreateAccountResponse response = 2;
+}

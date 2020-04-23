@@ -20,7 +20,7 @@ message ListAccountResponse {
 }
 
 message ListAccount {
-    option (api.endpoint) = {method: "GET" path:"/account"};
+    option (.rest.endpoint) = {method: "GET" path:"/account"};
 
     ListAccountRequest request = 1;
     ListAccountResponse response = 2;

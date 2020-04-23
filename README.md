@@ -3,6 +3,8 @@ Proto Web
 
 ## proto-service
 
+该方式会将方法名定义为url，使用post作为请求的方法，从而使得所有的请求都是protbuf的。
+
 ### 定义接口
 
 api/account/api/list_account.proto
@@ -115,6 +117,8 @@ public class AccountCustomizedController {
 
 ## proto-rest
 
+该方式是一个RESTful风格的实现，具体的请求方法和请求路径会通过option在protobuf中定义清楚。该方式会按照REST的方式使用请求方法，当使用GET方法时候，如果要拼接路径参数则无法使用protobuf，需要将字段解析出来拼接到url中进行请求。
+
 ### 定义接口
 
 api/account/rest/api/list_account.proto
@@ -192,11 +196,11 @@ message AccountApi {
 @RequestMapping("/account")
 public class AccountStandardController {
 
-    @PostMapping(
+    @GetMapping(
         path = "account",
         consumes = {"application/x-protobuf", "application/x-protobuf;charset=UTF-8"},
         produces = {"application/x-protobuf", "application/x-protobuf;charset=UTF-8"})
-    public ListAccountResponse listAccount(@RequestBody ListAccountRequest request) {
+    public ListAccountResponse listAccount(ListAccountRequest request) {
         ListAccountResponse response = ListAccountResponse.newBuilder().build();
         return response;
     }

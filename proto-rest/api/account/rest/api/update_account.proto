@@ -8,19 +8,20 @@ package account.rest.api;
 import "core/rest.proto";
 import "account/rest/data/account.proto";
 
-message GetAccountRequest {
-}
-
-message GetAccountResponse {
+message UpdateAccountRequest {
     account.rest.data.Account account = 1;
 }
 
-message GetAccount {
+message UpdateAccountResponse {
+    account.rest.data.Account account = 1;
+}
 
-    option (.rest.endpoint) = {method: "GET" path:"/account/{accountId}"};
+message UpdateAccount {
 
-    GetAccountRequest request = 1;
-    GetAccountResponse response = 2;
+    option (.rest.endpoint) = {method: "PUT" path:"/account/{accountId}"};
+
+    UpdateAccountRequest request = 1;
+    UpdateAccountResponse response = 2;
 
     // 约定：path_variable 开头的命名均为路径参数
     int64 path_variable_account_id = 3;
