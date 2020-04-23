@@ -2,8 +2,6 @@ package io.github.donespeak.protoweb.protorest.account.controller;
 
 import io.github.donespeak.protoweb.protorest.account.proto.rest.api.DeleteAccountRequest;
 import io.github.donespeak.protoweb.protorest.account.proto.rest.api.DeleteAccountResponse;
-import io.github.donespeak.protoweb.protorest.account.proto.rest.api.FakeAccountRequest;
-import io.github.donespeak.protoweb.protorest.account.proto.rest.api.FakeAccountResponse;
 import io.github.donespeak.protoweb.protorest.account.proto.rest.api.UpdateAccountRequest;
 import io.github.donespeak.protoweb.protorest.account.proto.rest.api.UpdateAccountResponse;
 import io.github.donespeak.protoweb.protorest.account.proto.rest.data.Account;
