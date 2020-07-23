@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package core;
+
+import "google/protobuf/descriptor.proto";
+
+// f(global_service_id, local_method_id) ==> rpc 服务方法的id
+
+extend google.protobuf.ServiceOptions {
+    uint32 global_service_id = 1000;
+}
+
+extend google.protobuf.MethodOptions {
+    uint32 local_method_id = 1000;
+}

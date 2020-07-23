@@ -1,7 +1,9 @@
 package io.github.donespeak.protoweb.protorest.core.config;
 
+import com.google.protobuf.GeneratedMessageV3;
 import io.github.donespeak.protoweb.protorest.core.EnableProtoRest;
 import io.github.donespeak.protoweb.protorest.core.support.ProtoRequestMappingHandlerMapping;
+import lombok.Builder;
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcRegistrations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

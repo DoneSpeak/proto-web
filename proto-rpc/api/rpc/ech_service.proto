@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.github.donespeak.protoweb.protorpc";
+
+package rpc;
+
+import "core/core.proto";
+
+message EchoRequest {
+    string message = 1;
+}
+
+message EchoResponse {
+    string message = 2;
+}
+
+service EchoService {
+    option (core.global_service_id) = 1000;
+
+    rpc ech(EchoRequest) returns (EchoResponse) {
+        option (core.local_method_id) = 1;
+    }
+}

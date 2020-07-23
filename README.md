@@ -235,6 +235,10 @@ public class AccountCustomizedController {
 
 ## proto-validation
 
+## 前端技术栈
+
+- []()
+
 ## 规范
 
 接口由提供方声明，只需要定义自己对外提供的接口，不定义自己需要调用的接口。
@@ -247,11 +251,26 @@ public class AccountCustomizedController {
 
 还不支持，见 issue [Feature Request : Support for google protobuf #2801](https://github.com/postmanlabs/postman-app-support/issues/2801)
 
-**spluxx/Protoman**  
+**spluxx/Protoman(推荐)**  
 
 > A Postman-like API client for protobuf-based messages.  
 
+@Github: [spluxx/Protoman](https://github.com/spluxx/Protoman/issues/13)  
+
+目前`v0.3.3`是可以正常使用的，`v0.3.2`还有一些问题。
+
 ### proto + grpc
+
+**uw-labs/BloomRPC(推荐)**  
+
+> Inspired by Postman and GraphQL Playground  
+> BloomRPC aim to give the simplest and efficient developer experience for exploring and querying your GRPC services.
+
+@Github: [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc)    
+
+![BloomRPC](https://github.com/uw-labs/bloomrpc/blob/master/resources/editor-preview.gif)  
+
+- [How To Test GRPC Services Using GUI client](https://www.youtube.com/watch?v=27HLPHLOwEQ&list=PLI5t0u6ye3FGXJMh5kU2RvN0xrul67p7R&index=5)
 
 **njpatel/grpcc**    
 
@@ -263,8 +282,6 @@ repo: [njpatel/grpcc](https://github.com/njpatel/grpcc)
 
 > GRPC JSON is a proxy which allows HTTP API tools like Postman to interact with gRPC servers.  
 
-![BloomRPC](https://github.com/uw-labs/bloomrpc/blob/master/resources/editor-preview.gif)
-
 repo: [jnewmano/grpc-json-proxy](https://github.com/jnewmano/grpc-json-proxy)  
 ref: [gRPC + Postman = 😍](https://medium.com/@jnewmano/grpc-postman-173b62a64341)  
 
@@ -272,6 +289,15 @@ ref: [gRPC + Postman = 😍](https://medium.com/@jnewmano/grpc-postman-173b62a64
 
 还不支持，见 issue [gRPC support in Postman #5194](https://github.com/postmanlabs/postman-app-support/issues/5194)
 
-## 参考
+### Api设计规则
 
+- [API Design Guide @cloud.google.com](https://cloud.google.com/apis/design/)
+
+## TODO
+
+- 如果一个接口可以返回rest或者protobuf message，我建议在controller就返回protobuf，如果用户发来的请求是Accept: application/json，protobuf的httpmessageconverter会自动将protobuf转化成json返回
+
+## 参考
+- [Third-Party Add-ons for Protocol Buffers](https://github.com/protocolbuffers/protobuf/blob/master/docs/third_party.md)
 - [Protocol Buffers @developers.google.com](https://developers.google.com/protocol-buffers/docs/overview)
+- [gRPC with REST and Open APIs](https://grpc.io/blog/coreos/) #readlater

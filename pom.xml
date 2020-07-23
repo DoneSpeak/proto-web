@@ -17,6 +17,10 @@
         <module>proto-rpc</module>
         <module>proto-grpc-gateway</module>
         <module>parent</module>
+        <module>proto-websocket</module>
+        <module>proto-rpc-web</module>
+        <module>grpc-server</module>
+        <module>grpc-web</module>
     </modules>
 
 </project>
