@@ -23,7 +23,7 @@
         <spring-cloud-dependencies.version>Greenwich.SR4</spring-cloud-dependencies.version>
 
         <!-- 与protobuf相关的构件都需要和protobuf-java保持一致 -->
-        <protobuf-java.version>3.7.1</protobuf-java.version>
+        <protobuf-java.version>3.16.1</protobuf-java.version>
         <!-- 1.4 已是最高版本，所是用的protobuf-java为 2.5.0，应该不在有更新了，推荐使用protobuf-java-util -->
         <protobuf-java-format.version>1.4</protobuf-java-format.version>
         <protobuf-java-util.version>3.7.1</protobuf-java-util.version>
